@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/first_fragment">
+
+    <fragment
+        android:id="@+id/first_fragment"
+        android:name="com.example.androiddeveloperonthevkmessengerteam.view.FirstScreen"
+        android:label="FirstFragment"
+        tools:layout="@layout/first_screen">
+    </fragment>
+
+    <fragment
+        android:id="@+id/second_fragment"
+        android:name="com.example.androiddeveloperonthevkmessengerteam.view.SecondScreen"
+        android:label="SecondFragment"
+        tools:layout="@layout/second_screen">
+    </fragment>
+
+    <action
+        android:id="@+id/action_to_first"
+        app:destination="@id/first_fragment"
+        app:popUpTo="@id/first_fragment"
+        app:popUpToInclusive="true"/>
+
+    <action
+        android:id="@+id/action_to_second"
+        app:destination="@id/second_fragment"
+        app:popUpTo="@id/second_fragment"
+        app:popUpToInclusive="true"/>
+
+</navigation>
